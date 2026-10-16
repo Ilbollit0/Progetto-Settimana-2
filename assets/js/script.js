@@ -215,6 +215,31 @@ console.table(filtraDisponibiliConRating());
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function renderProdotti(lista) {
+  const container = document.querySelector("#prodotti");
+  let html = "";
+ 
+  for (const p of lista) {
+    // il bottone è lo stesso: cambiano solo "disabled" e il testo
+    const disabilitato = p.disponibile ? "" : "disabled";
+    const testoBottone = p.disponibile ? "Aggiungi al carrello" : "Esaurito";
+ 
+    html += `
+      <article class="prodotto">
+        <div class="img-prodotto">${p.immagine}</div>
+        <p class="nome">${p.nome}</p>
+        <p class="rating"><span class="stelle">${stelline(p.rating)}</span> <span class="voto">(${p.rating})</span></p>
+        <p class="prezzo">${formattaPrezzo(p.prezzo)}</p>
+        <button class="btn-carrello" ${disabilitato}>${testoBottone}</button>
+      </article>
+    `;
+  }
+ 
+  container.innerHTML = html;
+}
+
+console.log(renderProdotti)
+
 /* VERSIONE AVANZATA — Aggiungi al carrello
    Quando si clicca il bottone "Aggiungi al carrello", incrementa il contatore
    nell'header (Carrello (0) → Carrello (1) → ...).
