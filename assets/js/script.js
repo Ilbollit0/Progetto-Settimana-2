@@ -8,7 +8,6 @@ REGOLE
 - Cerca solo cose non viste a lezione. Tutto il necessario è già stato spiegato in settimana.
 */
 
-
 /* VERSIONE INTERMEDIA — array prodotti
    Crea l'array "prodotti" con almeno 12 oggetti.
    Ogni oggetto: nome, categoria, prezzo, rating (1-5), immagine, disponibile.
@@ -16,13 +15,128 @@ REGOLE
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const prodotti = [
+  {
+    nome: "Cuffie wireless con cancellazione del rumore",
+    categoria: "Elettronica",
+    prezzo: 89.99,
+    rating: 4,
+    immagine: "Cuffie",
+    disponibile: true,
+  },
+  {
+    nome: "Tablet 10 pollici 64GB",
+    categoria: "Elettronica",
+    prezzo: 199.0,
+    rating: 5,
+    immagine: "Tablet",
+    disponibile: true,
+  },
+  {
+    nome: "Il romanzo dell'anno",
+    categoria: "Libri",
+    prezzo: 14.9,
+    rating: 4,
+    immagine: "Libro",
+    disponibile: true,
+  },
+  {
+    nome: "Zaino da viaggio 30L impermeabile",
+    categoria: "Abbigliamento",
+    prezzo: 49.99,
+    rating: 4,
+    immagine: "Zaino",
+    disponibile: true,
+  },
+  {
+    nome: "Lampada LED da scrivania orientabile",
+    categoria: "Casa",
+    prezzo: 29.5,
+    rating: 3,
+    immagine: "Lampada",
+    disponibile: true,
+  },
+  {
+    nome: "Smartwatch fitness con GPS",
+    categoria: "Elettronica",
+    prezzo: 119.0,
+    rating: 4,
+    immagine: "Smartwatch",
+    disponibile: true,
+  },
+  {
+    nome: "Mouse ergonomico wireless",
+    categoria: "Elettronica",
+    prezzo: 24.9,
+    rating: 4,
+    immagine: "Mouse",
+    disponibile: true,
+  },
+  {
+    nome: "Caffettiera moka 6 tazze",
+    categoria: "Casa",
+    prezzo: 22.0,
+    rating: 5,
+    immagine: "Caffettiera",
+    disponibile: true,
+  },
+  {
+    nome: "Monitor 24 pollici Full HD",
+    categoria: "Elettronica",
+    prezzo: 150.0,
+    rating: 3,
+    immagine: "Monitor",
+    disponibile: true,
+  },
+  {
+    nome: "Felpa con cappuccio unisex",
+    categoria: "Abbigliamento",
+    prezzo: 39.9,
+    rating: 2,
+    immagine: "Felpa",
+    disponibile: true,
+  },
+  {
+    nome: "Set di pentole antiaderenti",
+    categoria: "Casa",
+    prezzo: 64.9,
+    rating: 2,
+    immagine: "Pentole",
+    disponibile: false,
+  },
+  {
+    nome: "Manuale di fotografia digitale",
+    categoria: "Libri",
+    prezzo: 24.5,
+    rating: 4,
+    immagine: "Fotografia",
+    disponibile: false,
+  },
+];
 
+console.log(prodotti)
 /* VERSIONE INTERMEDIA — formattaPrezzo(prezzo)
    Funzione che ritorna una stringa tipo "€ 19,99".
    Esempio in console.log: Monitor: € 150,00
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function formattaPrezzo(prezzo) {
+  const parti = String(prezzo).split(".");
+  const interi = parti[0];
+  let decimali = parti[1];
+ 
+  if (decimali === undefined) {
+    decimali = "00";
+  } else if (decimali.length === 1) {
+    decimali = decimali + "0";
+  }
+ 
+  return `€ ${interi},${decimali}`;
+}
+ 
+console.log(`Monitor: ${formattaPrezzo(150)}`); 
 
 
 /* VERSIONE INTERMEDIA — stelline(rating)
@@ -54,7 +168,6 @@ REGOLE
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-
 /* VERSIONE AVANZATA — Aggiungi al carrello
    Quando si clicca il bottone "Aggiungi al carrello", incrementa il contatore
    nell'header (Carrello (0) → Carrello (1) → ...).
@@ -64,7 +177,6 @@ REGOLE
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-
 /* VERSIONE AVANZATA — Ordinamento
    Menu a tendina con: Prezzo crescente, Prezzo decrescente, Rating.
    Suggerimento: per rendere più leggibile la select puoi usare optgroup
@@ -72,14 +184,12 @@ REGOLE
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-
 /* VERSIONE AVANZATA — Riepilogo carrello
    Pagina carrello con elenco prodotti aggiunti, totale, bottone "Svuota".
    Concetto da scoprire: localStorage.setItem / localStorage.getItem.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
 
 /* VERSIONE AVANZATA — localStorage
    Il carrello sopravvive al refresh della pagina.
