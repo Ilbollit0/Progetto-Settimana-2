@@ -147,11 +147,43 @@ console.log(`Monitor: ${formattaPrezzo(150)}`);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function stelline(rating) {
+  let risultato = "";
+ 
+  for (let i = 0; i < 5; i++) {
+    if (i < rating) {
+      risultato += "★";
+    } else {
+      risultato += "☆";
+    }
+  }
+ 
+  return risultato;
+}
+ 
+console.log(`Monitor: rating 3 → "${stelline(3)}"`); // "★★★☆☆"
+
+
 /* VERSIONE INTERMEDIA — Filtro per categoria
    Funzione che riceve il parametro categoria e filtra l'array prodotti mostrando solo i prodotti della categoria ricevuta
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function filtraPerCategoria(categoria) {
+  const trovati = [];
+ 
+  for (const p of prodotti) {
+    if (p.categoria === categoria) {
+      trovati.push(p);
+    }
+  }
+ 
+  return trovati;
+}
+ 
+console.table(filtraPerCategoria("Libri"));
+
 
 /* VERSIONE INTERMEDIA — Filtro disponibilità e rating
    Funzione che genera un array filtrato dall'array prodotti, mostrando soltanto i prodotti disponibili con rating >= 3
