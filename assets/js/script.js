@@ -191,6 +191,21 @@ console.table(filtraPerCategoria("Libri"));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function filtraDisponibiliConRating() {
+  const trovati = [];
+ 
+  for (const p of prodotti) {
+    if (p.disponibile && p.rating >= 3) {
+      trovati.push(p);
+    }
+  }
+ 
+  return trovati;
+}
+ 
+console.table(filtraDisponibiliConRating());
+
+
 /* --------------------------------------------------------------
 
 /* VERSIONE AVANZATA — renderProdotti(lista)
