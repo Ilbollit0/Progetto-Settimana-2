@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  line-height: 1.5;
+  color: #111;
+  background: #fff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+body {
+  background: #f7f7f7;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header,
+.menu,
+.griglia,
+.footer-contenuto {
+  font-size: 0;
+}
+
+.logo,
+.ricerca,
+.menu {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.card-categoria,
+.prodotti,
+.colonna {
+  display: inline-block;
+  vertical-align: top;
+}
+
+header,
+.hero,
+footer {
+  color: #fff;
+}
+
+.menu .carrello,
+.elettronica,
+footer {
+  background: #232f3e;
+}
+
+.logo,
+.stelle {
+  color: #ff9900;
+}
+
+.card-categoria a,
+.voto {
+  color: #007185;
+}
+
+.ricerca button,
+.btn-carrello {
+  color: #111;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #131921;
+  padding: 12px 24px;
+}
+
+.logo {
+  width: 11%;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.ricerca {
+  width: 55%;
+}
+
+.ricerca input,
+.ricerca button {
+  height: 38px;
+  font-size: 14px;
+  vertical-align: top;
+}
+
+.ricerca input {
+  width: calc(100% - 80px);
+  padding: 0 12px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.ricerca button {
+  width: 80px;
+  background: #febd69;
+  font-weight: 600;
+  border-radius: 0 4px 4px 0;
+}
+
+.menu {
+  width: 32%;
+  text-align: right;
+}
+
+.menu a {
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.menu .carrello {
+  padding: 9px 14px;
+  border-radius: 4px;
+}
+
+.hero {
+  background: #303f51;
+  text-align: center;
+  padding: 64px 24px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #eeeeee;
+}
+
+main {
+  padding-bottom: 56px;
+}
+
+.categorie,
+.venduti {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 48px 24px 0;
+}
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.card-categoria,
+.prodotto {
+  width: calc((100% - 60px) / 4);
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.card-categoria:nth-child(4n),
+.prodotto:nth-child(4n) {
+  margin-right: 0;
+}
+
+.card-categoria {
+  overflow: hidden;
+}
+
+.img-categoria,
+.img-prodotto {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.img-categoria {
+  height: 195px;
+  line-height: 195px;
+  color: #eeeeee;
+}
+
+.libri {
+  background: #c45500;
+}
+
+.abbigliamento {
+  background: #146eb4;
+}
+
+.casa {
+  background: #067d62;
+}
+
+.prodotti
+.info {
+  padding: 14px;
+}
+
+.card-categoria h3 {
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.card-categoria a {
+  font-size: 14px;
+}
+
+.prodotto {
+  padding: 16px;
+}
+
+.img-prodotto {
+  height: 260px;
+  line-height: 260px;
+  background: #eeeeee;
+  color: #333333;
+  border-radius: 4px;
+}
+
+.nome {
+  margin-top: 14px;
+  font-size: 14px;
+  min-height: 42px;
+}
+
+.rating {
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.stelle {
+  letter-spacing: 1px;
+}
+
+.prezzo {
+  margin-top: 4px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #b12704;
+}
+
+carrello {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  background: #ffd814;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+carrello:hover {
+  background: #f7ca00;
+}
+
+.footer-contenuto {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.colonna {
+  width: 33%;
+  font-size: 14px;
+}
+
+.colonna h4 {
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+.colonna a {
+  color: #dddddd;
+}
+
+.colonna ul {
+  list-style: none;
+}
+
+.colonna li {
+  margin-bottom: 10px;
+}
